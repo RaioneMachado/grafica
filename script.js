@@ -12,10 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
             : '<i class="fas fa-bars"></i>';
     }
 
-    // Verifica se o elemento existe antes de adicionar o event listener
     if (mobileMenu) {
         mobileMenu.addEventListener('click', function(e) {
-            e.stopPropagation(); // Impede a propagação para o document.click
+            e.stopPropagation();
             toggleMenu();
         });
     }
@@ -83,24 +82,53 @@ document.addEventListener('DOMContentLoaded', function() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
 
-    if (filterBtns.length > 0) {
+    if (filterBtns.length > 0 && portfolioItems.length > 0) {
+        // Mostrar todos os itens inicialmente
+        portfolioItems.forEach(item => {
+            item.style.display = 'block';
+            item.style.opacity = '1';
+            item.style.visibility = 'visible';
+        });
+
         filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
+            btn.addEventListener('click', function() {
+                // Remove active class de todos os botões
                 filterBtns.forEach(btn => btn.classList.remove('active'));
-                btn.classList.add('active');
+                // Adiciona active class no botão clicado
+                this.classList.add('active');
                 
-                const filter = btn.getAttribute('data-filter');
+                const filterValue = this.getAttribute('data-filter');
                 
                 portfolioItems.forEach(item => {
-                    item.style.display = (filter === 'all' || item.getAttribute('data-category') === filter) 
-                        ? 'block' 
-                        : 'none';
+                    if (filterValue === 'all') {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.visibility = 'visible';
+                        }, 50);
+                    } else {
+                        if (item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.visibility = 'visible';
+                            }, 50);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.visibility = 'hidden';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    }
                 });
             });
         });
     }
 
-    // ========== CARREGAR PORTFÓLIO ==========
+    // ========== REMOVER CARREGAMENTO DINÂMICO DO PORTFÓLIO ==========
+    // (Comentado pois já temos os itens no HTML)
+    /*
     const portfolioGrid = document.querySelector('.portfolio-grid');
     if (portfolioGrid) {
         const portfolioData = [
@@ -126,6 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         loadPortfolioItems();
     }
+    */
 
     // ========== DEPOIMENTOS ==========
     const testimonials = document.querySelectorAll('.testimonial');
@@ -166,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     window.addEventListener('scroll', animeScroll);
-    animeScroll(); // Executa uma vez ao carregar
+    animeScroll();
 
     // ========== WHATSAPP ==========
     function updateWhatsAppNumber() {
