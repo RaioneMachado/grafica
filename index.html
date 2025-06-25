@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfica Express - Soluções Gráficas Completa</title>
+    <meta name="description" content="Gráfica especializada em cartões de visita, panfletos, banners, brindes personalizados e muito mais. Qualidade e rapidez no seu material gráfico.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo.png" type="image/png">
+    
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- WhatsApp API -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagens/logo grafica.png" alt="Gráfica Express">
+                </a>
+            </div>
+            
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="hero" id="home">
+        <div class="slider">
+            <div class="slide active">
+                <div class="slide-content">
+                    <h1>Impressão Digital de Alta Qualidade</h1>
+                    <p>Soluções gráficas completas para o seu negócio</p>
+                    <a href="#servicos" class="btn">Conheça Nossos Serviços</a>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <h1>Brindes Personalizados</h1>
+                    <p>Deixe sua marca na memória dos seus clientes</p>
+                    <a href="#servicos" class="btn">Solicitar Orçamento</a>
+                </div>
+            </div>
+        </div>
+        <div class="slider-nav">
+            <button class="prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Seção de Serviços -->
+    <section class="services" id="servicos">
+        <div class="container">
+            <h2 class="section-title">Nossos <span>Serviços</span></h2>
+            <p class="section-subtitle">Oferecemos soluções completas para suas necessidades gráficas</p>
+            
+            <div class="services-grid">
+                <!-- Cartão de Visita -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3>Cartão de Visita</h3>
+                    <p>Cartões de visita em diversos papéis e acabamentos para deixar sua marca registrada.</p>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de um orçamento para Cartão de Visita" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Orçamento
+                    </a>
+                </div>
+                
+                <!-- Panfletos -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3>Panfletos</h3>
+                    <p>Panfletos e flyers de alta qualidade para divulgar seu negócio ou evento.</p>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de um orçamento para Panfletos" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Orçamento
+                    </a>
+                </div>
+                
+                <!-- Cardápios -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Cardápios</h3>
+                    <p>Cardápios personalizados para restaurantes, bares e lanchonetes.</p>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de um orçamento para Cardápios" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Orçamento
+                    </a>
+                </div>
+                
+                <!-- Pastas -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-folder"></i>
+                    </div>
+                    <h3>Pastas</h3>
+                    <p>Pastas personalizadas para apresentações profissionais e institucionais.</p>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de um orçamento para Pastas" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Orçamento
+                    </a>
+                </div>
+                
+                <!-- Wind Banner -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <h3>Wind Banner</h3>
+                    <p>Banners resistentes e duráveis para comunicação visual indoor e outdoor.</p>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de um orçamento para Wind Banner" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Orçamento
+                    </a>
+                </div>
+                
+                <!-- Banner -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3>Banner</h3>
+                    <p>Banners em lona para eventos, promoções e comunicação visual.</p>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de um orçamento para Banner" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Orçamento
+                    </a>
+                </div>
+                
+                <!-- Impressões em Lona -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-roller"></i>
+                    </div>
+                    <h3>Impressões em Lona</h3>
+                    <p>Impressões de alta qualidade em lona para diversos fins.</p>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de um orçamento para Impressões em Lona" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Orçamento
+                    </a>
+                </div>
+                
+                <!-- Adesivos -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-sticky-note"></i>
+                    </div>
+                    <h3>Adesivos</h3>
+                    <p>Adesivos personalizados para decoração, identificação e divulgação.</p>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de um orçamento para Adesivos" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Orçamento
+                    </a>
+                </div>
+                
+                <!-- Fachadas em Lona -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Fachadas em Lona</h3>
+                    <p>Fachadas personalizadas para seu estabelecimento com alta durabilidade.</p>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de um orçamento para Fachadas em Lona" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Orçamento
+                    </a>
+                </div>
+                
+                <!-- Plotagem em Geral -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>Plotagem em Geral</h3>
+                    <p>Serviços de plotagem e corte para diversos materiais e aplicações.</p>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de um orçamento para Plotagem em Geral" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Orçamento
+                    </a>
+                </div>
+                
+                <!-- Canecas -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mug-hot"></i>
+                    </div>
+                    <h3>Canecas</h3>
+                    <p>Canecas personalizadas para presentear ou promover sua marca.</p>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de um orçamento para Canecas" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Orçamento
+                    </a>
+                </div>
+                
+                <!-- Camisetas -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Camisetas</h3>
+                    <p>Camisetas personalizadas com estampas de alta qualidade.</p>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de um orçamento para Camisetas" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Orçamento
+                    </a>
+                </div>
+                
+                <!-- Chaveiros -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Chaveiros</h3>
+                    <p>Chaveiros personalizados para presentear ou divulgar sua marca.</p>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de um orçamento para Chaveiros" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Orçamento
+                    </a>
+                </div>
+                
+                <!-- Brindes -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Brindes</h3>
+                    <p>Diversos brindes personalizados para sua empresa ou evento.</p>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de um orçamento para Brindes" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Orçamento
+                    </a>
+                </div>
+                
+                <!-- Sublimação em Geral -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Sublimação em Geral</h3>
+                    <p>Técnica de impressão para diversos produtos com alta durabilidade.</p>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de um orçamento para Sublimação em Geral" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Orçamento
+                    </a>
+                </div>
+                
+                <!-- Blocos de Recibo -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-receipt"></i>
+                    </div>
+                    <h3>Blocos de Recibo</h3>
+                    <p>Blocos personalizados para seu negócio com numeração sequencial.</p>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de um orçamento para Blocos de Recibo" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Orçamento
+                    </a>
+                </div>
+                
+                <!-- Quadros Personalizados -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-portrait"></i>
+                    </div>
+                    <h3>Quadros Personalizados</h3>
+                    <p>Quadros em canvas, PVC ou lona para decorar ambientes.</p>
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de um orçamento para Quadros Personalizados" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Orçamento
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Nós -->
+    <section class="about" id="sobre">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Sobre <span>Nós</span></h2>
+                    <p>Somos uma gráfica especializada em soluções de impressão e comunicação visual, com mais de 10 anos de experiência no mercado.</p>
+                    <p>Nossa missão é oferecer produtos de alta qualidade, com atendimento personalizado e prazos rápidos, ajudando nossos clientes a transmitir sua mensagem com impacto visual.</p>
+                    <p>Contamos com equipamentos modernos e uma equipe qualificada para atender desde pequenas demandas até grandes projetos gráficos.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Qualidade Garantida</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Preços Competitivos</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Entrega Rápida</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Atendimento Personalizado</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/sobre-nos.jpg" alt="Sobre Nós">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Portfólio -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Nosso <span>Portfólio</span></h2>
+            <p class="section-subtitle">Confira alguns de nossos trabalhos realizados</p>
+            
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="cartoes">Cartões</button>
+                <button class="filter-btn" data-filter="banners">Banners</button>
+                <button class="filter-btn" data-filter="brindes">Brindes</button>
+                <button class="filter-btn" data-filter="personalizados">Personalizados</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Itens do portfólio serão carregados via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Depoimentos -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Depoimentos</h2>
+            <p class="section-subtitle">O que nossos clientes dizem</p>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <div class="testimonial-content">
+                        <p>"Excelente qualidade e atendimento! Fiz meus cartões de visita e ficaram perfeitos. Super recomendo!"</p>
+                        <div class="testimonial-author">
+                            <img src="images/cliente1.jpg" alt="Cliente">
+                            <div>
+                                <h4>Carlos Silva</h4>
+                                <span>Empresa ABC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Sempre faço meus materiais gráficos aqui. Ótimo custo-benefício e sempre entregam no prazo combinado."</p>
+                        <div class="testimonial-author">
+                            <img src="images/cliente2.jpg" alt="Cliente">
+                            <div>
+                                <h4>Ana Oliveira</h4>
+                                <span>Restaurante Sabor Caseiro</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Fizemos os brindes para nossa empresa e todos amaram! Qualidade impecável e atendimento diferenciado."</p>
+                        <div class="testimonial-author">
+                            <img src="images/cliente3.jpg" alt="Cliente">
+                            <div>
+                                <h4>Roberto Santos</h4>
+                                <span>Tech Solutions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Fixo -->
+    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de um orçamento" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Gráfica Express</h4>
+                    <p>Soluções gráficas completas com qualidade, rapidez e preço justo.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#">Cartão de Visita</a></li>
+                        <li><a href="#">Panfletos</a></li>
+                        <li><a href="#">Banners</a></li>
+                        <li><a href="#">Brindes</a></li>
+                        <li><a href="#">Personalizados</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Assine nossa newsletter para receber promoções e novidades.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu Email" required>
+                        <button type="submit">Assinar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2023 Gráfica Express. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="animations.js"></script>
+</body>
+</html>
