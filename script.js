@@ -209,3 +209,48 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     updateWhatsAppNumber();
 });
+document.addEventListener('DOMContentLoaded', function() {
+    // Efeito de digitação no título
+    const titulo = document.querySelector('.caneca-texto h2 span');
+    if (titulo) {
+        const textoOriginal = titulo.textContent;
+        titulo.textContent = '';
+        
+        let i = 0;
+        const typingEffect = setInterval(() => {
+            if (i < textoOriginal.length) {
+                titulo.textContent += textoOriginal.charAt(i);
+                i++;
+            } else {
+                clearInterval(typingEffect);
+            }
+        }, 100);
+    }
+    
+    // Contador regressivo para promoção
+    const promoTag = document.querySelector('.destaque-tag');
+    if (promoTag) {
+        let countdown = 10; // minutos
+        const updateCountdown = () => {
+            promoTag.textContent = `PROMOÇÃO LIMITADA (Termina em ${countdown} min)`;
+            countdown--;
+            if (countdown < 0) {
+                promoTag.textContent = "ÚLTIMAS UNIDADES!";
+                clearInterval(countdownInterval);
+            }
+        };
+        const countdownInterval = setInterval(updateCountdown, 60000);
+        updateCountdown();
+    }
+    
+    // Efeito parallax nas canecas flutuantes
+    window.addEventListener('scroll', function() {
+        const scrollY = window.scrollY;
+        const canecas = document.querySelectorAll('.caneca-flutuante');
+        
+        canecas.forEach((caneca, index) => {
+            const speed = index === 0 ? 0.2 : 0.1;
+            caneca.style.transform = `translateY(${scrollY * speed}px) rotate(${scrollY * 0.05}deg)`;
+        });
+    });
+});
