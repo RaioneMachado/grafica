@@ -2680,3 +2680,239 @@ img {
         min-height: 300px;
     }
 }
+/* Seção Cardápio Impresso - Design Impactante */
+.cardapio-single-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #0a0807 0%, #E74C3C 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.cardapio-hero {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.cardapio-content {
+    flex: 1;
+}
+
+.destaque-badge {
+    background: #e74c3c;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+.cardapio-content h1 {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.cardapio-content h1 span {
+    color: #e74c3c;
+    position: relative;
+}
+
+.cardapio-content h1 span::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #e74c3c, #f39c12);
+}
+
+.destaque-texto {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.cardapio-features {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    background: rgba(52, 152, 219, 0.1);
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.feature-item i {
+    color: #e74c3c;
+    font-size: 1.2rem;
+}
+
+.preco-box {
+    margin-bottom: 30px;
+}
+
+.preco-antigo {
+    display: block;
+    text-decoration: line-through;
+    color: #95a5a6;
+    font-size: 1.1rem;
+}
+
+.preco-atual {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2c3e50;
+    line-height: 1;
+    margin: 5px 0;
+}
+
+.preco-descricao {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    padding: 18px 35px;
+    border-radius: 8px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+    margin-top: 10px;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+}
+
+.cardapio-image {
+    flex: 1;
+    position: relative;
+    text-align: center;
+}
+
+.img-destaque {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    transform: perspective(1000px) rotateY(-10deg);
+    transition: all 0.5s ease;
+}
+
+.cardapio-image:hover .img-destaque {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.selo-garantia {
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    background: #2c3e50;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+
+.selo-garantia i {
+    color: #f1c40f;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .cardapio-hero {
+        flex-direction: column;
+    }
+    
+    .cardapio-content {
+        order: 1;
+        text-align: center;
+    }
+    
+    .cardapio-image {
+        order: 2;
+        margin-top: 40px;
+    }
+    
+    .cardapio-features {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardapio-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .destaque-texto {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .cardapio-single-section {
+        padding: 60px 0;
+    }
+    
+    .cardapio-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .preco-atual {
+        font-size: 2rem;
+    }
+    
+    .cta-button {
+        padding: 15px 25px;
+        font-size: 1rem;
+        width: 100%;
+    }
+    
+    .selo-garantia {
+        right: 0;
+        bottom: -10px;
+    }
+}

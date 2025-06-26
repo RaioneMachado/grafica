@@ -307,3 +307,39 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Efeito de brilho na imagem do cardápio
+    const cardapioImg = document.querySelector('.img-destaque');
+    if (cardapioImg) {
+        cardapioImg.addEventListener('mousemove', function(e) {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            this.style.filter = `
+                drop-shadow(0 15px 30px rgba(0,0,0,0.2))
+                brightness(${1 + (y * 0.1)})
+            `;
+        });
+        
+        cardapioImg.addEventListener('mouseleave', function() {
+            this.style.filter = 'drop-shadow(0 15px 30px rgba(0,0,0,0.2))';
+        });
+    }
+
+    // Contador regressivo para promoção
+    const badgePromo = document.querySelector('.destaque-badge');
+    if (badgePromo) {
+        let horas = 24; // horas restantes
+        const updateCountdown = () => {
+            badgePromo.textContent = `PROMOÇÃO (${horas}h RESTANTES)`;
+            horas--;
+            if (horas < 0) {
+                badgePromo.textContent = "ÚLTIMAS UNIDADES!";
+                clearInterval(timer);
+            }
+        };
+        const timer = setInterval(updateCountdown, 3600000); // atualiza a cada hora
+        updateCountdown();
+    }
+});
