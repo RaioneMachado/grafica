@@ -388,3 +388,32 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            const isActive = question.classList.contains('active');
+            
+            // Fecha todas as respostas
+            faqQuestions.forEach(q => {
+                q.classList.remove('active');
+                q.nextElementSibling.classList.remove('active');
+            });
+            
+            // Abre apenas a clicada se não estiver ativa
+            if (!isActive) {
+                question.classList.add('active');
+                answer.classList.add('active');
+            }
+        });
+    });
+
+    // Abre a primeira pergunta por padrão
+    if (faqQuestions.length > 0) {
+        faqQuestions[0].classList.add('active');
+        faqQuestions[0].nextElementSibling.classList.add('active');
+    }
+});
