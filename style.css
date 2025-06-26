@@ -2226,3 +2226,301 @@ img {
         font-size: 1rem;
     }
 }
+
+/* Seção Placas - Ultra Chamativa */
+.placas-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #020405 0%, #C63C2E 100%);
+    position: relative;
+    overflow: hidden;
+    border-top: 3px solid #2c3e50;
+}
+
+.placa-decorativa {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(44, 62, 80, 0.05);
+    border-radius: 15px;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.placa-decorativa:nth-child(1) {
+    top: -50px;
+    left: -50px;
+}
+
+.placa-decorativa:nth-child(2) {
+    bottom: -50px;
+    right: -50px;
+}
+
+.placa-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+.placa-imagem {
+    flex: 1;
+    position: relative;
+    text-align: center;
+}
+
+.placa-imagem img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.2));
+    transform: perspective(1000px) rotateY(-15deg);
+    transition: all 0.5s ease;
+}
+
+.placa-imagem:hover img {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.selo-garantia {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    background: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+.placa-texto {
+    flex: 1;
+}
+
+.destaque-urgente {
+    background: #e74c3c;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.placa-texto h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.placa-texto h2 span {
+    color: #e74c3c;
+    position: relative;
+}
+
+.placa-texto h2 span::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #e74c3c, #f39c12);
+}
+
+.placa-texto .lead {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.destaque-box {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.destaque-item {
+    background: rgba(52, 152, 219, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.destaque-item i {
+    color: #e74c3c;
+    font-size: 1.2rem;
+}
+
+.beneficios-placa {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.beneficios-placa li {
+    padding: 10px 0;
+    font-size: 1.1rem;
+    color: #34495e;
+    position: relative;
+    padding-left: 35px;
+}
+
+.beneficios-placa li i {
+    color: #e74c3c;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+}
+
+.cta-placa {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.preco-placa {
+    text-align: center;
+}
+
+.preco-placa .a-partir {
+    display: block;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+.preco-placa .valor {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2c3e50;
+    line-height: 1;
+}
+
+.whatsapp-placa-btn {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    padding: 18px 30px;
+    border-radius: 8px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    text-decoration: none;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-placa-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+}
+
+.selos-confianca {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.selo {
+    background: #f8f9fa;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.selo i {
+    color: #e74c3c;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .placa-content {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .placa-content {
+        flex-direction: column;
+    }
+    
+    .placa-imagem {
+        order: 1;
+        margin-bottom: 40px;
+    }
+    
+    .placa-texto {
+        order: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .placas-section {
+        padding: 70px 0;
+    }
+    
+    .placa-texto h2 {
+        font-size: 2rem;
+    }
+    
+    .destaque-box {
+        flex-direction: column;
+    }
+    
+    .cta-placa {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .preco-placa {
+        text-align: left;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .placa-texto h2 {
+        font-size: 1.8rem;
+    }
+    
+    .beneficios-placa li {
+        font-size: 1rem;
+    }
+    
+    .whatsapp-placa-btn {
+        padding: 15px;
+        font-size: 1rem;
+    }
+}

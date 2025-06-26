@@ -254,3 +254,40 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Efeito de brilho na placa
+    const placaImg = document.querySelector('.placa-imagem img');
+    if (placaImg) {
+        placaImg.addEventListener('mousemove', function(e) {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            this.style.filter = `
+                drop-shadow(0 15px 30px rgba(0,0,0,0.2))
+                brightness(${1 + (y * 0.2)})
+            `;
+        });
+        
+        placaImg.addEventListener('mouseleave', function() {
+            this.style.filter = 'drop-shadow(0 15px 30px rgba(0,0,0,0.2))';
+        });
+    }
+    
+    // Contador de placas instaladas (animação)
+    const contadorPlacas = document.querySelector('.selo:nth-child(1) span');
+    if (contadorPlacas) {
+        let contador = 0;
+        const target = 500;
+        const increment = target / 50;
+        
+        const updateCounter = setInterval(() => {
+            contador += increment;
+            if (contador >= target) {
+                contador = target;
+                clearInterval(updateCounter);
+            }
+            contadorPlacas.textContent = `+${Math.floor(contador)} placas instaladas`;
+        }, 50);
+    }
+});
