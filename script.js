@@ -291,3 +291,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 50);
     }
 });
+document.addEventListener('DOMContentLoaded', function() {
+    // Atualizar iframe com o link exato fornecido
+    const iframe = document.querySelector('.mapa-iframe');
+    iframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3836.123456789012!2d-47.56789012345678!3d-15.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDA3JzI0LjQiUyA0N8KwMzQnMDEuNiJX!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr";
+    
+    // Efeito de zoom nos cards
+    const infoCards = document.querySelectorAll('.info-card');
+    infoCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'scale(1.02)';
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'scale(1)';
+        });
+    });
+});
