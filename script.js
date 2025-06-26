@@ -343,3 +343,48 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCountdown();
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Efeito de contador animado
+    const clientBadge = document.querySelector('.client-badge span');
+    if (clientBadge) {
+        let count = 0;
+        const target = 150;
+        const increment = target / 20;
+        
+        const updateCounter = setInterval(() => {
+            count += increment;
+            if (count >= target) {
+                count = target;
+                clearInterval(updateCounter);
+            }
+            clientBadge.textContent = `+${Math.floor(count)} fachadas instaladas`;
+        }, 50);
+    }
+
+    // Efeito de brilho na imagem ao mover mouse
+    const fachadaImg = document.querySelector('.fachada-image img');
+    if (fachadaImg) {
+        fachadaImg.addEventListener('mousemove', function(e) {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            this.style.filter = `
+                brightness(${1 + (y * 0.1)})
+                contrast(${1 + (x * 0.05)})
+            `;
+        });
+        
+        fachadaImg.addEventListener('mouseleave', function() {
+            this.style.filter = 'brightness(1) contrast(1)';
+        });
+    }
+
+    // Mudar texto do badge urgente após 5 segundos
+    const urgenteBadge = document.querySelector('.urgente-badge');
+    if (urgenteBadge) {
+        setTimeout(() => {
+            urgenteBadge.textContent = "PROMOÇÃO POR TEMPO LIMITADO!";
+        }, 5000);
+    }
+});
